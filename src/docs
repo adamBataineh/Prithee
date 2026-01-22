@@ -1,0 +1,47 @@
+HW1: Prithee
+Adam Bataineh - arn4aa
+
+Program overview:
+This program is a console game based on a sonnet
+The program prints the sonnet from the beginning
+It stops at a random word and hides that word with underscores
+Nothing after the missing word is printed
+The user is asked to type the missing word
+The program tells the user if the answer is correct or incorrect
+The game repeats until the user gets three correct answers or three incorrect answers
+
+Input and output:
+The input is a word typed by the user
+The output is part of the sonnet with one word hidden
+The program also prints feedback and the current score
+
+Definition of a word:
+A word is any space separated token in the sonnet
+Punctuation is considered part of the word
+For example dignity, includes the comma
+Answers are checked without considering letter case
+
+Program design:
+The sonnet is stored as an array of lines
+This keeps the original line formatting
+The program scans the sonnet and records every word position
+Each word position stores the line number and word number
+
+Game flow:
+At the start of each round a random word position is chosen
+The program makes sure the same word is not chosen twice in a row
+All lines before the missing word are printed normally
+The line with the missing word is printed only up to that word
+The missing word is replaced with underscores
+The program then asks the user for the missing word
+
+Ending condition:
+The game ends when the user reaches three correct answers
+The game also ends if the user reaches three incorrect answers
+
+Tests:
+The tests are in a separate file called tests.java
+The tests check underscore creation
+The tests check word comparison logic
+The tests check that output stops at the missing word
+The tests check that the random word changes between rounds
